@@ -19,7 +19,7 @@ jobs:
         key: ${{ secrets.VOTES_SERVER }}
         port: 22
         script: |
-          cd VOTES_SERVER
+          cd votes
           git pull origin master
           mix deps.get --only prod
           MIX_ENV=prod mix compile
