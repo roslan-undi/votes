@@ -2,8 +2,8 @@ use Mix.Config
 
 # Configure your database
 config :votes, Votes.Repo,
-  username: "postgres",
-  password: "postgres",
+  username: "roslan",
+  password: "ramblingros",
   database: "votes_dev",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
