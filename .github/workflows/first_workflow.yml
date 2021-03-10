@@ -26,5 +26,5 @@ jobs:
           npm run deploy --prefix ./assets
           mix phx.digest
           MIX_ENV=prod mix release --overwrite
-          _build/prod/rel/votes/bin/votes stop
+          
           _build/prod/rel/votes/bin/votes daemon
