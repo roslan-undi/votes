@@ -1,0 +1,696 @@
+body {
+    @apply relative font-sans antialiased bg-cool-gray-200;
+  }
+  
+  header {
+    @apply mb-8;
+  }
+  
+  .container {
+    @apply max-w-6xl px-6 mx-auto;
+  }
+  
+  h1 {
+    @apply mb-8 text-4xl font-extrabold text-center text-cool-gray-900;
+  }
+  
+  ul.examples {
+    @apply max-w-xs mx-auto mt-8 text-2xl list-disc;
+  
+    li {
+      @apply mt-3;
+  
+      a {
+        @apply underline;
+      }
+    }
+  }
+  
+  .icon {
+    fill: currentColor;
+  }
+  
+  /* Light */
+  
+  #light {
+    @apply max-w-xl mx-auto text-center;
+  
+    button {
+      @apply px-4 py-2 mx-1 transition duration-150 ease-in-out bg-transparent border border-2 rounded-lg shadow-sm outline-none border-cool-gray-400;
+    }
+  
+    button:hover {
+      @apply bg-cool-gray-300;
+    }
+  
+    img {
+      @apply w-10;
+    }
+  
+    .meter {
+      @apply flex h-12 mb-8 overflow-hidden text-base rounded-lg bg-cool-gray-300;
+    }
+  
+    .meter > span {
+      @apply flex flex-col justify-center font-bold text-center bg-yellow-300 text-cool-gray-900 whitespace-nowrap;
+      transition: width 2s ease;
+    }
+  }
+  
+  /* License */
+  
+  #license {
+    @apply max-w-lg mx-auto text-center;
+  
+    .card {
+      @apply bg-white rounded-lg shadow shadow-lg;
+  
+      .content {
+        @apply p-6;
+      }
+    }
+  
+    .seats {
+      @apply inline-flex items-center mb-8;
+  
+      img {
+        @apply w-10 pr-2;
+      }
+  
+      span {
+        @apply text-xl font-semibold text-cool-gray-700;
+      }
+    }
+  
+    .amount {
+      @apply mt-4 text-4xl font-extrabold leading-none text-cool-gray-900;
+    }
+  }
+  
+  /* Dashboard */
+  
+  #dashboard {
+    @apply max-w-2xl mx-auto;
+  
+    .stats {
+      @apply grid grid-cols-3 mb-8 bg-white rounded-lg shadow-lg;
+  
+      .stat {
+        @apply p-6 text-center;
+  
+        .name {
+          @apply block mt-2 text-lg font-medium leading-6 text-cool-gray-500;
+        }
+  
+        .value {
+          @apply block text-5xl font-extrabold leading-none text-indigo-600;
+        }
+      }
+    }
+  
+    button {
+      @apply inline-flex items-center px-4 py-2 text-sm font-medium leading-6 text-indigo-700 transition duration-150 ease-in-out bg-indigo-100 border border-indigo-300 rounded-md shadow-sm outline-none;
+  
+      img {
+        @apply w-4 h-4 mr-2;
+      }
+    }
+  
+    button:hover {
+      @apply bg-white;
+    }
+  
+    .controls {
+      @apply flex items-center justify-end;
+  
+      form {
+        @apply flex items-center;
+  
+        label {
+          @apply mr-2 text-xs font-semibold tracking-wide text-indigo-800 uppercase;
+        }
+  
+        select {
+          @apply h-10 px-4 py-2 mr-2 font-semibold leading-tight text-indigo-700 border border-indigo-300 rounded-lg appearance-none cursor-pointer bg-cool-gray-200;
+        }
+  
+        select:focus {
+          @apply bg-white border-indigo-500 outline-none;
+        }
+      }
+    }
+  }
+  
+  /* Search */
+  
+  #search {
+    @apply max-w-3xl mx-auto text-center;
+  
+    form {
+      @apply inline-flex items-center;
+  
+      input[type="text"] {
+        @apply h-10 px-5 text-base bg-white border border-cool-gray-400 rounded-l-md;
+      }
+  
+      input[type="text"]:focus {
+        @apply outline-none;
+      }
+  
+      input[name*="city"] {
+        @apply ml-4;
+      }
+    }
+  
+    button {
+      @apply h-10 px-4 py-2 transition duration-150 ease-in-out bg-transparent border border-l-0 outline-none border-cool-gray-400 rounded-r-md;
+  
+      img {
+        @apply w-4 h-4;
+      }
+    }
+  
+    button:hover {
+      @apply bg-cool-gray-300;
+    }
+  
+    .open {
+      @apply inline-flex items-center px-3 py-1 text-xs font-medium leading-5 text-green-800 bg-green-200 rounded-md rounded-full;
+    }
+  
+    .closed {
+      @apply inline-flex items-center px-3 py-1 text-xs font-medium leading-5 text-red-800 bg-red-200 rounded-md rounded-full;
+    }
+  
+    .stores {
+      @apply mt-8 overflow-hidden bg-white rounded-md shadow;
+  
+      li {
+        @apply px-6 py-4 border-t border-cool-gray-300;
+  
+        .first-line {
+          @apply flex items-center justify-between;
+  
+          .name {
+            @apply text-lg font-medium leading-5 text-indigo-600 truncate;
+          }
+  
+          .status {
+            @apply flex flex-shrink-0 ml-2;
+          }
+        }
+  
+        .second-line {
+          @apply flex justify-between mt-2;
+  
+          .street {
+            @apply flex items-center mt-0 text-base leading-5 text-cool-gray-400;
+  
+            img {
+              @apply flex-shrink-0 w-5 h-5 mr-1;
+            }
+          }
+  
+          .phone_number {
+            @apply flex items-center mt-0 text-sm leading-5 text-cool-gray-400;
+  
+            img {
+              @apply flex-shrink-0 w-5 h-5 mr-2;
+            }
+          }
+        }
+      }
+    }
+  
+    li:hover {
+      @apply bg-indigo-100;
+    }
+  }
+  
+  /* Filter */
+  
+  #filter {
+    .boats {
+      @apply flex flex-wrap;
+    }
+  
+    .card {
+      @apply max-w-sm m-6 overflow-hidden bg-white rounded shadow-lg;
+  
+      img {
+        @apply w-full;
+      }
+  
+      .content {
+        @apply px-6 py-4;
+      }
+  
+      .model {
+        @apply pb-3 text-xl font-bold text-center text-cool-gray-900;
+      }
+  
+      .details {
+        @apply flex justify-between px-6 mt-2;
+      }
+  
+      .price {
+        @apply text-xl font-semibold text-cool-gray-700;
+      }
+  
+      .type {
+        @apply inline-block px-3 py-1 text-sm font-semibold rounded-full bg-cool-gray-300 text-cool-gray-700;
+      }
+    }
+  
+    form {
+      @apply max-w-xl mx-auto mb-4;
+  
+      .filters {
+        @apply flex items-baseline justify-around;
+  
+        select {
+          @apply w-1/3 px-4 py-3 font-semibold leading-tight border rounded-lg appearance-none cursor-pointer bg-cool-gray-200 border-cool-gray-400 text-cool-gray-700;
+        }
+  
+        select:focus {
+          @apply outline-none bg-cool-gray-200 border-cool-gray-500;
+        }
+  
+        .prices {
+          @apply flex;
+  
+          input[type="checkbox"] {
+            @apply fixed w-0 opacity-0;
+          }
+  
+          input[type="checkbox"]:checked + label {
+            @apply bg-indigo-300 border-indigo-500;
+          }
+  
+          label {
+            @apply inline-block px-4 py-3 text-lg font-semibold leading-5 border-t border-b border-cool-gray-400 bg-cool-gray-300;
+          }
+  
+          label:hover {
+            @apply cursor-pointer bg-cool-gray-400;
+          }
+  
+          label:first-of-type {
+            @apply border-l border-r rounded-l-lg;
+          }
+  
+          label:last-of-type {
+            @apply border-l border-r rounded-r-lg;
+          }
+        }
+  
+        a {
+          @apply inline text-lg underline;
+        }
+      }
+    }
+  }
+  
+  /* Donations */
+  
+  #donations {
+    @apply max-w-4xl mx-auto;
+  
+    .wrapper {
+      @apply inline-block min-w-full mb-4 overflow-hidden align-middle border-b rounded-lg shadow border-cool-gray-300;
+    }
+  
+    a {
+      @apply font-semibold text-indigo-500 underline;
+    }
+  
+    .fresh {
+      @apply px-4 py-2 text-lg font-medium leading-5 text-green-800 bg-green-200 rounded-md rounded-full;
+    }
+  
+    .stale {
+      @apply px-4 py-2 text-lg font-medium leading-5 text-red-800 bg-red-200 rounded-md rounded-full;
+    }
+  
+    table {
+      @apply min-w-full;
+  
+      th {
+        @apply px-6 py-4 text-base font-medium leading-4 tracking-wider text-center text-white uppercase bg-transparent bg-indigo-700 border-b border-cool-gray-300;
+  
+        a {
+          @apply text-white no-underline;
+        }
+  
+        a:hover {
+          @apply underline;
+        }
+      }
+  
+      td {
+        @apply px-6 py-4 text-lg font-medium leading-5 text-center border-b whitespace-nowrap border-cool-gray-300 text-cool-gray-900;
+      }
+  
+      tbody {
+        @apply bg-white;
+      }
+  
+      th.item {
+        @apply pl-12 text-left;
+      }
+  
+      td.item {
+        @apply pl-12 font-semibold text-left;
+      }
+    }
+  
+    .footer {
+      @apply max-w-4xl py-8 mx-auto text-lg text-center bg-white;
+  
+      .pagination {
+        @apply inline-flex shadow-sm;
+      }
+  
+      a {
+        @apply inline-flex items-center px-3 py-2 -ml-px text-base font-medium leading-5 no-underline bg-white border border-cool-gray-300 text-cool-gray-600;
+      }
+  
+      a:hover {
+        @apply bg-cool-gray-300;
+      }
+  
+      a.active {
+        @apply text-white bg-indigo-700;
+      }
+  
+      a.previous {
+        @apply rounded-l-md;
+      }
+  
+      a.next {
+        @apply rounded-r-md;
+      }
+    }
+  }
+  
+  /* Incidents */
+  
+  #incidents {
+    @apply max-w-3xl mx-auto;
+  
+    .incident {
+      @apply flex items-center justify-between w-full p-4 mt-2 leading-normal bg-white border-t border-b border-l border-l-0 border-r rounded rounded-b-none rounded-b border-cool-gray-300;
+    }
+  
+    .priority {
+      @apply px-4;
+    }
+  
+    .description {
+      @apply flex-1 px-4 text-lg font-bold text-cool-gray-800;
+    }
+  
+    .location {
+      @apply flex-1 px-4 text-base text-lg font-semibold text-cool-gray-600;
+    }
+  
+    .status {
+      @apply px-4;
+    }
+  
+    button {
+      @apply px-4 py-2 font-semibold text-white bg-indigo-500 rounded outline-none;
+    }
+  
+    button:hover {
+      @apply bg-indigo-700;
+    }
+  
+    .resolved {
+      @apply px-2 text-lg font-bold leading-5 text-indigo-600 bg-transparent;
+    }
+  
+    .priority-1 {
+      @apply px-4 py-2 text-lg font-bold leading-5 text-white bg-red-500 rounded-md;
+    }
+  
+    .priority-2 {
+      @apply px-4 py-2 text-lg font-bold leading-5 text-white bg-orange-500 rounded-md;
+    }
+  
+    .priority-3 {
+      @apply px-4 py-2 text-lg font-bold leading-5 text-white bg-yellow-500 rounded-md;
+    }
+  }
+  
+  /* New Incident */
+  
+  #new-incident {
+    @apply w-full max-w-md mx-auto;
+  
+    .wrapper {
+      @apply px-10 py-6 bg-white rounded-lg shadow;
+    }
+  
+    form {
+      input[type="text"],
+      textarea {
+        @apply block w-full px-3 py-2 text-base leading-5 transition duration-150 ease-in-out border rounded-md appearance-none border-cool-gray-400;
+      }
+  
+      input[type="text"]:focus,
+      textarea:focus {
+        @apply border-indigo-300 outline-none ring ring-indigo-300;
+      }
+  
+      .group:not(:first-of-type) {
+        @apply mt-6;
+      }
+  
+      label {
+        @apply block mb-1 text-sm font-bold leading-5 text-cool-gray-700;
+      }
+  
+      button {
+        @apply flex justify-center w-full px-4 py-2 mt-6 text-sm font-medium text-white transition duration-150 ease-in-out bg-indigo-600 border border-transparent rounded-md outline-none;
+      }
+  
+      button:hover {
+        @apply bg-indigo-500;
+      }
+  
+      button:focus {
+        @apply border-indigo-700 outline-none ring ring-indigo-300;
+      }
+  
+      .help-block {
+        @apply mt-4 text-orange-600;
+      }
+    }
+  }
+  
+  /*
+   * Copied from Tailwind v1.0
+   */
+  
+  .form-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #ffffff;
+    border-color: #d2d6dc;
+    border-width: 1px;
+    border-radius: 0.375rem;
+    padding-top: 0.5rem;
+    padding-right: 0.75rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .form-input::-moz-placeholder {
+    color: #9fa6b2;
+    opacity: 1;
+  }
+  
+  .form-input:-ms-input-placeholder {
+    color: #9fa6b2;
+    opacity: 1;
+  }
+  
+  .form-input::-ms-input-placeholder {
+    color: #9fa6b2;
+    opacity: 1;
+  }
+  
+  .form-input::placeholder {
+    color: #9fa6b2;
+    opacity: 1;
+  }
+  
+  .form-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(164, 202, 254, 0.45);
+    border-color: #a4cafe;
+  }
+  
+  /*
+   * Range Input
+   *
+   * Generated by:
+   * http://danielstern.ca/range.css
+   *
+   */
+  
+  input[type="range"] {
+    -webkit-appearance: none;
+    width: 100%;
+    margin: 13.8px 0;
+  }
+  input[type="range"]:focus {
+    outline: none;
+  }
+  input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    background: #7f9cf5;
+    border-radius: 0px;
+    border: 0px solid #7f9cf5;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    border: 1px solid #4c51bf;
+    height: 36px;
+    width: 17px;
+    border-radius: 35px;
+    background: #4c51bf;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -13.8px;
+  }
+  input[type="range"]:focus::-webkit-slider-runnable-track {
+    background: #97aef7;
+  }
+  input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    background: #7f9cf5;
+    border-radius: 0px;
+    border: 0px solid #7f9cf5;
+  }
+  input[type="range"]::-moz-range-thumb {
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    border: 1px solid #4c51bf;
+    height: 36px;
+    width: 17px;
+    border-radius: 35px;
+    background: #4c51bf;
+    cursor: pointer;
+  }
+  input[type="range"]::-ms-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+  input[type="range"]::-ms-fill-lower {
+    background: #678af3;
+    border: 0px solid #7f9cf5;
+    border-radius: 0px;
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  }
+  input[type="range"]::-ms-fill-upper {
+    background: #7f9cf5;
+    border: 0px solid #7f9cf5;
+    border-radius: 0px;
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  }
+  input[type="range"]::-ms-thumb {
+    box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+    border: 1px solid #4c51bf;
+    height: 36px;
+    width: 17px;
+    border-radius: 35px;
+    background: #4c51bf;
+    cursor: pointer;
+    height: 8.4px;
+  }
+  input[type="range"]:focus::-ms-fill-lower {
+    background: #7f9cf5;
+  }
+  input[type="range"]:focus::-ms-fill-upper {
+    background: #97aef7;
+  }
+  
+  /*
+   * Loading Spinner
+   *
+   * Copied from:
+   * https://projects.lukehaas.me/css-loaders/
+   */
+  
+  .loader,
+  .loader:before,
+  .loader:after {
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation: load7 1.8s infinite ease-in-out;
+    animation: load7 1.8s infinite ease-in-out;
+  }
+  .loader {
+    color: #5a67d8;
+    font-size: 10px;
+    margin: 20px auto;
+    position: relative;
+    text-indent: -9999em;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+  }
+  .loader:before,
+  .loader:after {
+    content: "";
+    position: absolute;
+    top: 0;
+  }
+  .loader:before {
+    left: -3.5em;
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+  }
+  .loader:after {
+    left: 3.5em;
+  }
+  @-webkit-keyframes load7 {
+    0%,
+    80%,
+    100% {
+      box-shadow: 0 2.5em 0 -1.3em;
+    }
+    40% {
+      box-shadow: 0 2.5em 0 0;
+    }
+  }
+  @keyframes load7 {
+    0%,
+    80%,
+    100% {
+      box-shadow: 0 2.5em 0 -1.3em;
+    }
+    40% {
+      box-shadow: 0 2.5em 0 0;
+    }
+  }
+  

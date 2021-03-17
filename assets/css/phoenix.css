@@ -1,0 +1,52 @@
+/* Phoenix specific classes for generated files. */
+
+.phx-hero {
+    @apply px-4 py-8 mt-0 mb-4 text-center rounded-md bg-cool-gray-200;
+  
+    h1 {
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+  
+    p {
+      font-weight: 300;
+      font-size: 125%;
+      margin-bottom: 2rem;
+    }
+  
+    button {
+      @apply block px-8 py-2 mx-auto mt-4 text-sm font-bold text-white uppercase transition duration-150 ease-in-out bg-blue-600 rounded;
+    }
+  
+    input[type="text"] {
+      @apply w-1/3 h-10 px-4 text-sm bg-white border rounded-md border-cool-gray-300;
+    }
+  
+    input[type="text"]:focus {
+      @apply outline-none;
+    }
+  }
+  
+  .row {
+    @apply flex flex-row justify-around;
+  }
+  
+  .row .column {
+    @apply flex-auto block max-w-xs px-16 pt-4 m-0 ml-0;
+  }
+  
+  .row h2 {
+    @apply mb-4 text-2xl font-normal font-semibold;
+  }
+  
+  .row .column ul {
+    @apply max-w-xs mx-auto list-disc;
+  }
+  
+  .row .column ul li {
+    @apply mt-3;
+  }
+  
+  .row .column ul li a {
+     @apply underline;
+  }

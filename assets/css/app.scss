@@ -1,6 +1,11 @@
 @tailwind base;
 @tailwind components;
 @import "../node_modules/nprogress/nprogress.css";
+@import "./custom.css";
+@import "./live_view.css";
+@import "./phoenix.css";
+
+
 
 [hidden] {
   @apply hidden;
